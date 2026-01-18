@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br" class="scroll-smooth">
-<head> 
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LabGeo-ITA</title>
@@ -342,4 +342,50 @@
                 // Translations 1, 2, 3
                 card1_title: "Remote Sensing Applied to Infrastructure and Transport",
                 card1_desc: "Methods and applications of optical RS, SAR, and LiDAR for diagnosis, monitoring, and planning of critical infrastructure, with emphasis on airports, air transport, and urban systems.",
-                card
+                card2_title: "Geodynamics, Geotechnics, and Terrain Deformation Monitoring",
+                card2_desc: "InSAR and high-resolution data for analyzing subsidence, settlement, and geotechnical impacts associated with urban and underground infrastructure works.",
+                card3_title: "Disasters, Hydrology, and Resilience",
+                card3_desc: "Development of geospatial models and mapping for risk assessment, vulnerability, and resilience of socio-environmental systems and infrastructure against extreme events.",
+
+                // NOVAS TRADUÇÕES (4 e 5) CRIADAS AGORA
+                card4_title: "Spatial Ecology and Fauna-Infrastructure Interactions",
+                card4_desc: "Application of geotechnologies to study ecological systems, large animals, and critical interactions between fauna, climate, and infrastructure, including airport operational safety.",
+                card5_title: "Geospatial Modeling, Complex Systems, and Decision Making",
+                card5_desc: "Integration of geoprocessing, statistics, multi-criteria analysis, and complex adaptive systems theory for decision support in engineering, ecology, and territorial planning.",
+
+                team_title: "Key Researchers",
+                bio_1: "\"Focused on the intersection of hydrology and airport infrastructure.\"",
+                bio_2: "\"Specialist in LiDAR, pavement engineering, and deformation analysis.\"",
+                pubs_title: "Selected Publications",
+                view_more: "See full list on Google Scholar →"
+            }
+        };
+
+        function setLanguage(lang) {
+            // Atualiza os textos
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (i18n[lang][key]) {
+                    element.style.opacity = 0;
+                    setTimeout(() => {
+                        element.textContent = i18n[lang][key];
+                        element.style.opacity = 1;
+                    }, 200);
+                }
+            });
+
+            // Atualiza estilo dos botões
+            const btnPt = document.getElementById('btn-pt');
+            const btnEn = document.getElementById('btn-en');
+
+            if(lang === 'pt') {
+                btnPt.className = "px-3 py-1 rounded-full text-xs font-bold transition bg-white text-itaBlue shadow-sm";
+                btnEn.className = "px-3 py-1 rounded-full text-xs font-bold transition text-slate-500 hover:text-slate-700";
+            } else {
+                btnEn.className = "px-3 py-1 rounded-full text-xs font-bold transition bg-white text-itaBlue shadow-sm";
+                btnPt.className = "px-3 py-1 rounded-full text-xs font-bold transition text-slate-500 hover:text-slate-700";
+            }
+        }
+    </script>
+</body>
+</html>
