@@ -1,374 +1,199 @@
-<!DOCTYPE html>
-<html lang="pt-br" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LabGeo-ITA</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        itaBlue: '#002f5d', 
-                        itaDark: '#0a1929',
-                        accent: '#10b981', // Verde Tech
-                        gold: '#fbbf24' // Para destaques Q1/Premium
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        .hero-premium {
-            background: radial-gradient(circle at top right, #1e293b, #0f172a), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop');
-            background-blend-mode: overlay;
-            background-size: cover;
-            background-attachment: fixed;
-        }
-        .glass-nav {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-        }
-        .fade-text {
-            transition: opacity 0.3s ease-in-out;
-        }
-    </style>
-</head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-accent selection:text-white">
-
-    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20 items-center">
-                <div class="flex items-center gap-3 cursor-pointer" onclick="window.scrollTo(0,0)">
-                    <div class="h-10 w-10 bg-itaBlue rounded-lg text-white flex items-center justify-center font-bold shadow-lg shadow-itaBlue/30">
-                        <i class="fa-solid fa-satellite-dish"></i>
-                    </div>
-                    <span class="font-bold text-xl tracking-tight text-itaBlue">LabGeo-<span class="text-accent">ITA</span></span>
-                </div>
-
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#home" class="text-sm font-medium text-slate-600 hover:text-itaBlue transition" data-i18n="nav_home">Home</a>
-                    <a href="#pesquisa" class="text-sm font-medium text-slate-600 hover:text-itaBlue transition" data-i18n="nav_research">Research</a>
-                    <a href="#equipe" class="text-sm font-medium text-slate-600 hover:text-itaBlue transition" data-i18n="nav_team">Team</a>
-                    <a href="#publicacoes" class="text-sm font-medium text-slate-600 hover:text-itaBlue transition" data-i18n="nav_pubs">Publications</a>
-                    
-                    <div class="flex items-center bg-slate-200 rounded-full p-1 ml-4">
-                        <button onclick="setLanguage('pt')" id="btn-pt" class="px-3 py-1 rounded-full text-xs font-bold transition bg-white text-itaBlue shadow-sm">PT</button>
-                        <button onclick="setLanguage('en')" id="btn-en" class="px-3 py-1 rounded-full text-xs font-bold transition text-slate-500 hover:text-slate-700">EN</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <section id="home" class="hero-premium h-screen flex items-center justify-center relative px-4">
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-slate-50/10"></div> 
-        
-        <div class="max-w-6xl mx-auto z-10 text-center">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-accent text-xs font-bold tracking-widest backdrop-blur-sm mb-8 animate-pulse">
-                <span class="w-2 h-2 rounded-full bg-accent"></span> ITA • SÃO JOSÉ DOS CAMPOS
-            </div>
-            
-            <h1 class="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight tracking-tight">
-                <span data-i18n="hero_title1">Transformando o Geoespacial em</span><br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent to-cyan-300" data-i18n="hero_title2">Aplicações em Ecologia, Eng. Civil e de Transportes</span>
-            </h1>
-            
-            <p class="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto font-light leading-relaxed fade-text" data-i18n="hero_desc">
-                Aplicações de Geociências na Engenharia Civil-Aeronáutica
-            </p>
-            
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#pesquisa" class="px-8 py-3 bg-accent text-white font-semibold rounded-lg hover:bg-emerald-600 transition shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:transform hover:-translate-y-1" data-i18n="btn_research">
-                    Nossas Pesquisas
-                </a>
-                <a href="#contato" class="px-8 py-3 border border-slate-500 text-slate-300 font-semibold rounded-lg hover:bg-white/10 hover:border-white transition backdrop-blur-sm" data-i18n="btn_collab">
-                    Colaborar Conosco
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section id="pesquisa" class="py-24 bg-white relative">
+<section id="equipe" class="py-24 bg-slate-50 border-t border-slate-200">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-16 border-b border-slate-100 pb-4">
-                <div>
-                    <h2 class="text-3xl font-bold text-itaDark" data-i18n="research_title">Linhas de Pesquisa</h2>
-                    <p class="text-slate-500 mt-2" data-i18n="research_subtitle">Áreas de atuação dos pesquisadores associados</p>
-                </div>
-                <div class="text-4xl text-slate-200">
-                    <i class="fa-solid fa-layer-group"></i>
-                </div>
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-itaDark" data-i18n="team_title">Nossa Equipe</h2>
+                <div class="h-1 w-20 bg-accent mx-auto mt-4"></div>
             </div>
-
-            <div class="grid md:grid-cols-3 gap-10">
-                <div class="group cursor-pointer">
-                    <div class="h-64 rounded-2xl overflow-hidden relative shadow-lg mb-6">
-                        <div class="absolute inset-0 bg-itaBlue/20 group-hover:bg-transparent transition duration-500 z-10"></div>
-                        <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=800" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
-                        <div class="absolute bottom-4 left-4 z-20 bg-white/90 backdrop-blur px-3 py-1 rounded text-xs font-bold text-itaBlue">ENGENHARIA</div>
-                    </div>
-                    <h3 class="text-xl font-bold text-itaDark mb-2 group-hover:text-accent transition" data-i18n="card1_title">Sensoriamento Remoto Aplicado à Infraestrutura e Transportes</h3>
-                    <p class="text-slate-600 leading-relaxed text-sm" data-i18n="card1_desc">
-                        Métodos e aplicações de SR óptico, SAR e LiDAR para diagnóstico, monitoramento e planejamento de infraestruturas críticas, com ênfase em aeroportos, transporte aéreo e sistemas urbanos.
-                    </p>
-                </div>
-
-                <div class="group cursor-pointer">
-                    <div class="h-64 rounded-2xl overflow-hidden relative shadow-lg mb-6">
-                        <div class="absolute inset-0 bg-itaBlue/20 group-hover:bg-transparent transition duration-500 z-10"></div>
-                        <img src="https://images.unsplash.com/photo-1558494949-ef526b0042a0?q=80&w=800" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
-                        <div class="absolute bottom-4 left-4 z-20 bg-white/90 backdrop-blur px-3 py-1 rounded text-xs font-bold text-itaBlue">ENGENHARIA</div>
-                    </div>
-                    <h3 class="text-xl font-bold text-itaDark mb-2 group-hover:text-accent transition" data-i18n="card2_title">Geodinâmica, Geotecnia e Monitoramento de Deformações do Terreno</h3>
-                    <p class="text-slate-600 leading-relaxed text-sm" data-i18n="card2_desc">
-                        Interferometria SAR e dados de alta resolução para análise de subsidência, recalques e impactos geotécnicos associados a obras de infraestrutura urbana e subterrânea.
-                    </p>
-                </div>
-
-                <div class="group cursor-pointer">
-                    <div class="h-64 rounded-2xl overflow-hidden relative shadow-lg mb-6">
-                        <div class="absolute inset-0 bg-itaBlue/20 group-hover:bg-transparent transition duration-500 z-10"></div>
-                        <img src="https://images.unsplash.com/photo-1518709414768-a88986a455b1?q=80&w=800" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
-                        <div class="absolute bottom-4 left-4 z-20 bg-white/90 backdrop-blur px-3 py-1 rounded text-xs font-bold text-itaBlue">SENSORIAMENTO REMOTO</div>
-                    </div>
-                    <h3 class="text-xl font-bold text-itaDark mb-2 group-hover:text-accent transition" data-i18n="card3_title">Desastres, Hidrologia e Resiliência</h3>
-                    <p class="text-slate-600 leading-relaxed text-sm" data-i18n="card3_desc">
-                        Desenvolvimento de modelos e mapeamentos geoespaciais para avaliação de risco, vulnerabilidade e resiliência de sistemas socioambientais e infraestruturas frente a eventos extremos.
-                    </p>
-                </div>
-
-                <div class="group cursor-pointer">
-                    <div class="h-64 rounded-2xl overflow-hidden relative shadow-lg mb-6">
-                        <div class="absolute inset-0 bg-itaBlue/20 group-hover:bg-transparent transition duration-500 z-10"></div>
-                        <img src="https://images.unsplash.com/photo-1440557653036-7933390cc25c?q=80&w=800" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
-                        <div class="absolute bottom-4 left-4 z-20 bg-white/90 backdrop-blur px-3 py-1 rounded text-xs font-bold text-itaBlue">ECOLOGIA</div>
-                    </div>
-                    <h3 class="text-xl font-bold text-itaDark mb-2 group-hover:text-accent transition" data-i18n="card4_title">Ecologia Espacial e Interações Fauna–Infraestrutura</h3>
-                    <p class="text-slate-600 leading-relaxed text-sm" data-i18n="card4_desc">
-                        Aplicação de geotecnologias para o estudo de sistemas ecológicos, grandes animais e interações críticas entre fauna, clima e infraestrutura, incluindo segurança operacional aeroportuária.
-                    </p>
-                </div>
-                
-                <div class="group cursor-pointer">
-                    <div class="h-64 rounded-2xl overflow-hidden relative shadow-lg mb-6">
-                        <div class="absolute inset-0 bg-itaBlue/20 group-hover:bg-transparent transition duration-500 z-10"></div>
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
-                        <div class="absolute bottom-4 left-4 z-20 bg-white/90 backdrop-blur px-3 py-1 rounded text-xs font-bold text-itaBlue">SIMULAÇÃO</div>
-                    </div>
-                    <h3 class="text-xl font-bold text-itaDark mb-2 group-hover:text-accent transition" data-i18n="card5_title">Modelagem Geoespacial, Sistemas Complexos e Tomada de Decisão</h3>
-                    <p class="text-slate-600 leading-relaxed text-sm" data-i18n="card5_desc">
-                        Integração de geoprocessamento, estatística, análise multicritério e teoria de sistemas complexos adaptativos para suporte à decisão em engenharia, ecologia e planejamento territorial.
-                    </p>
-                </div> 
-            </div>
-        </div>
-    </section>
-
-    <section id="equipe" class="py-24 bg-slate-50 border-t border-slate-200">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold text-itaDark mb-16" data-i18n="team_title">Pesquisadores Principais</h2>
             
-            <div class="flex flex-wrap justify-center gap-8">
-                <div class="w-full sm:w-80 bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition duration-300 border border-slate-100 group">
-                    <div class="w-28 h-28 mx-auto rounded-full bg-slate-200 mb-6 overflow-hidden border-4 border-white shadow-lg">
-                        <img src="https://via.placeholder.com/150" alt="Researcher" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
-                    </div>
-                    <h4 class="text-lg font-bold text-itaDark">Seu Nome</h4>
-                    <span class="text-xs font-bold text-accent tracking-wider uppercase">PhD Candidate</span>
-                    <p class="text-slate-500 text-sm mt-4 italic" data-i18n="bio_1">"Focado na intersecção entre hidrologia e infraestrutura aeroportuária."</p>
-                    <div class="mt-6 flex justify-center gap-3">
-                        <a href="#" class="text-slate-400 hover:text-itaBlue text-lg transition"><i class="fa-brands fa-github"></i></a>
-                        <a href="#" class="text-slate-400 hover:text-itaBlue text-lg transition"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="#" class="text-slate-400 hover:text-itaBlue text-lg transition"><i class="fa-solid fa-graduation-cap"></i></a>
-                    </div>
-                </div>
-
-                 <div class="w-full sm:w-80 bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition duration-300 border border-slate-100 group">
-                    <div class="w-28 h-28 mx-auto rounded-full bg-slate-200 mb-6 overflow-hidden border-4 border-white shadow-lg">
-                        <img src="https://via.placeholder.com/150" alt="Researcher" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
-                    </div>
-                    <h4 class="text-lg font-bold text-itaDark">Eng. Civil & MSc</h4>
-                    <span class="text-xs font-bold text-accent tracking-wider uppercase">Research Partner</span>
-                    <p class="text-slate-500 text-sm mt-4 italic" data-i18n="bio_2">"Especialista em LiDAR, pavimentação e análise de deformações."</p>
-                    <div class="mt-6 flex justify-center gap-3">
-                        <a href="#" class="text-slate-400 hover:text-itaBlue text-lg transition"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="#" class="text-slate-400 hover:text-itaBlue text-lg transition"><i class="fa-solid fa-book"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="publicacoes" class="py-24 bg-white relative overflow-hidden">
-        <div class="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-itaBlue/5 rounded-full blur-3xl"></div>
-
-        <div class="max-w-5xl mx-auto px-4">
-            <div class="mb-12">
-                <h2 class="text-3xl font-bold text-itaDark" data-i18n="pubs_title">Publicações Selecionadas</h2>
-                <div class="h-1 w-20 bg-accent mt-4"></div>
-            </div>
-
-            <div class="space-y-6">
-                <div class="flex flex-col md:flex-row gap-6 bg-slate-50 p-6 rounded-xl border border-slate-100 hover:border-itaBlue/30 hover:shadow-lg transition duration-300">
-                    <div class="min-w-[80px] flex flex-col items-center justify-center border-r border-slate-200 pr-6">
-                        <span class="text-2xl font-bold text-slate-300">2025</span>
-                        <span class="text-xs font-bold text-gold bg-gold/10 px-2 py-1 rounded mt-2">Q1 Journal</span>
-                    </div>
-                    <div>
-                        <h4 class="text-lg font-bold text-itaDark mb-2 hover:text-itaBlue cursor-pointer">
-                            A Geospatial Model for Resilient Airport Location Assessment in Brazil
-                        </h4>
-                        <p class="text-slate-600 text-sm mb-3">
-                            <span class="font-semibold text-slate-800">Authors:</span> Seu Nome, Orientador, Colaborador.
-                        </p>
-                        <p class="text-slate-500 text-xs italic mb-4">Published in: Journal of Air Transport Management</p>
-                        <div class="flex gap-3">
-                            <a href="#" class="text-xs font-bold text-itaBlue border border-itaBlue px-3 py-1 rounded hover:bg-itaBlue hover:text-white transition"><i class="fa-solid fa-file-pdf mr-1"></i> PDF</a>
+            <div class="flex justify-center mb-16">
+                <div class="w-full max-w-4xl bg-white p-8 md:p-10 rounded-2xl shadow-lg border-l-4 border-itaBlue flex flex-col md:flex-row gap-8 items-center md:items-start">
+                    <div class="w-40 h-40 flex-shrink-0 rounded-full bg-slate-200 overflow-hidden border-4 border-white shadow-md relative">
+                         <img src="" alt="Dr. Eduardo Arraut" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 flex items-center justify-center text-slate-400">
+                            <i class="fa-solid fa-user text-4xl"></i>
                         </div>
                     </div>
-                </div>
+                    
+                    <div class="text-center md:text-left flex-1">
+                        <h3 class="text-2xl font-bold text-itaDark">Dr. Eduardo Moraes Arraut</h3>
+                        <span class="text-sm font-bold text-itaBlue uppercase tracking-widest">Líder do Laboratório & Professor</span>
+                        
+                        <div class="mt-4 space-y-3">
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                <strong class="text-slate-800">Expertise:</strong> Professor de Geomática no ITA. Especialista em Sistemas Complexos Adaptativos, Sensoriamento Remoto, Ecologia de Grandes Animais e Infraestrutura Aeronáutica.
+                            </p>
+                            <div class="bg-slate-50 p-3 rounded-lg border border-slate-100">
+                                <span class="text-xs font-bold text-accent uppercase block mb-1">Foco Atual</span>
+                                <p class="text-xs text-slate-600 italic">Seleção de sítios aeroportuários, mitigação de riscos de inundação e monitoramento ambiental (MapBiomas/IUCN).</p>
+                            </div>
+                        </div>
 
-                <div class="flex flex-col md:flex-row gap-6 bg-slate-50 p-6 rounded-xl border border-slate-100 hover:border-itaBlue/30 hover:shadow-lg transition duration-300">
-                    <div class="min-w-[80px] flex flex-col items-center justify-center border-r border-slate-200 pr-6">
-                        <span class="text-2xl font-bold text-slate-300">2024</span>
-                    </div>
-                    <div>
-                        <h4 class="text-lg font-bold text-itaDark mb-2 hover:text-itaBlue cursor-pointer">
-                            LiDAR Applications in Urban Pavement Monitoring
-                        </h4>
-                        <p class="text-slate-600 text-sm mb-3">
-                            <span class="font-semibold text-slate-800">Authors:</span> Colaborador Eng. Civil, Seu Nome.
-                        </p>
-                        <p class="text-slate-500 text-xs italic mb-4">Published in: Remote Sensing</p>
-                        <div class="flex gap-3">
-                            <a href="#" class="text-xs font-bold text-itaBlue border border-itaBlue px-3 py-1 rounded hover:bg-itaBlue hover:text-white transition"><i class="fa-solid fa-file-pdf mr-1"></i> PDF</a>
+                        <div class="mt-5">
+                            <a href="http://lattes.cnpq.br/6644520104732336" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-itaBlue border border-itaBlue px-4 py-2 rounded-full hover:bg-itaBlue hover:text-white transition">
+                                <i class="fa-regular fa-id-card"></i> Currículo Lattes
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="mt-10 text-center">
-                <a href="#" class="text-sm font-bold text-itaBlue hover:underline" data-i18n="view_more">Ver lista completa no Google Scholar &rarr;</a>
+
+            <h3 class="text-xl font-bold text-itaDark mb-8 pl-4 border-l-4 border-accent">Pesquisadores Associados</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100 group">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 rounded-full bg-slate-200 overflow-hidden relative">
+                            <img src="" alt="Kaian" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 flex items-center justify-center text-slate-400"><i class="fa-solid fa-user"></i></div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-itaDark">Dr. Kaian Shahateet</h4>
+                            <span class="text-xs text-accent font-bold uppercase">Pós-Doutorando (UGA)</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-500 mb-3">
+                        <strong>Formação:</strong> Doutor em Eng. Matemática (UPM).<br>
+                        <strong>Keywords:</strong> Criosfera, Machine Learning, Fusão de Dados.
+                    </p>
+                    <div class="bg-slate-50 p-3 rounded border border-slate-100 mb-4">
+                        <p class="text-xs text-slate-600 italic">"Mapping of Glacier Fractures in Antarctica via Remote Sensing Data Fusion."</p>
+                    </div>
+                    <a href="http://lattes.cnpq.br/5247004527593247" target="_blank" class="text-xs text-itaBlue font-bold hover:underline"><i class="fa-regular fa-id-card mr-1"></i> Lattes</a>
+                </div>
+
+            </div>
+
+            <h3 class="text-xl font-bold text-itaDark mb-8 pl-4 border-l-4 border-accent">Doutorandos & Mestrandos</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100 group">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 rounded-full bg-slate-200 overflow-hidden relative">
+                            <img src="" alt="Aluizio" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 flex items-center justify-center text-slate-400"><i class="fa-solid fa-user"></i></div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-itaDark">MSc. Aluizio Maia</h4>
+                            <span class="text-xs text-itaBlue font-bold uppercase">Doutorando (ITA)</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-500 mb-3">
+                        <strong>Formação:</strong> Mestre em SR (INPE), Geógrafo.<br>
+                        <strong>Keywords:</strong> Hidrologia, Risco de Inundação, Planejamento Aeroportuário.
+                    </p>
+                    <div class="bg-slate-50 p-3 rounded border border-slate-100 mb-4">
+                        <p class="text-xs text-slate-600 italic">"A Geospatial Model for Resilient Airport Location Assessment in Brazil."</p>
+                    </div>
+                    <a href="http://lattes.cnpq.br/8817900721556290" target="_blank" class="text-xs text-itaBlue font-bold hover:underline"><i class="fa-regular fa-id-card mr-1"></i> Lattes</a>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100 group">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 rounded-full bg-slate-200 overflow-hidden relative">
+                            <img src="" alt="Leon" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 flex items-center justify-center text-slate-400"><i class="fa-solid fa-user"></i></div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-itaDark">MSc. Leon Mortari</h4>
+                            <span class="text-xs text-itaBlue font-bold uppercase">Doutorando (ITA)</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-500 mb-3">
+                        <strong>Formação:</strong> Eng. Ambiental, Mestre em Geociências (UnB).<br>
+                        <strong>Keywords:</strong> Análise Multicritério, Planejamento Ambiental, Risco de Fauna.
+                    </p>
+                    <div class="bg-slate-50 p-3 rounded border border-slate-100 mb-4">
+                        <p class="text-xs text-slate-600 italic">"Interações aéreas no entorno de aeroportos dos EUA entre aeronaves e aves."</p>
+                    </div>
+                    <a href="http://lattes.cnpq.br/6075587921021179" target="_blank" class="text-xs text-itaBlue font-bold hover:underline"><i class="fa-regular fa-id-card mr-1"></i> Lattes</a>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100 group">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 rounded-full bg-slate-200 overflow-hidden relative">
+                            <img src="" alt="Ezequiel" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 flex items-center justify-center text-slate-400"><i class="fa-solid fa-user"></i></div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-itaDark">Eng. Ezequiel Rocha</h4>
+                            <span class="text-xs text-slate-500 font-bold uppercase">Mestrando (INPE)</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-500 mb-3">
+                        <strong>Formação:</strong> Eng. Civil (UEMA).<br>
+                        <strong>Keywords:</strong> LiDAR, Pavimentação, Eng. de Transportes.
+                    </p>
+                    <div class="bg-slate-50 p-3 rounded border border-slate-100 mb-4">
+                        <p class="text-xs text-slate-600 italic">"Monitoramento Preditivo da Saúde Estrutural de Pavimentos Aeroportuários (InSAR + LiDAR)."</p>
+                    </div>
+                    <a href="http://lattes.cnpq.br/7922956208156198" target="_blank" class="text-xs text-itaBlue font-bold hover:underline"><i class="fa-regular fa-id-card mr-1"></i> Lattes</a>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100 group">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 rounded-full bg-slate-200 overflow-hidden relative">
+                            <img src="" alt="Élida" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 flex items-center justify-center text-slate-400"><i class="fa-solid fa-user"></i></div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-itaDark">Met. Élida Magalhães</h4>
+                            <span class="text-xs text-slate-500 font-bold uppercase">Mestranda (ITA)</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-500 mb-3">
+                        <strong>Formação:</strong> Meteorologista (UFPA).<br>
+                        <strong>Keywords:</strong> Meteorologia Sinótica, Ecologia, Climatologia.
+                    </p>
+                    <div class="bg-slate-50 p-3 rounded border border-slate-100 mb-4">
+                        <p class="text-xs text-slate-600 italic">"Fatores Meteorológicos Influenciadores do Voo de Aves Planadoras."</p>
+                    </div>
+                    <a href="http://lattes.cnpq.br/7619939585443951" target="_blank" class="text-xs text-itaBlue font-bold hover:underline"><i class="fa-regular fa-id-card mr-1"></i> Lattes</a>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100 group">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 rounded-full bg-slate-200 overflow-hidden relative">
+                            <img src="" alt="Bruna" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 flex items-center justify-center text-slate-400"><i class="fa-solid fa-user"></i></div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-itaDark">Geól. Bruna Miraya</h4>
+                            <span class="text-xs text-slate-500 font-bold uppercase">Mestranda (ITA)</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-500 mb-3">
+                        <strong>Formação:</strong> Geóloga (USP).<br>
+                        <strong>Keywords:</strong> Geotecnia, Interferometria SAR, Obras Subterrâneas.
+                    </p>
+                    <div class="bg-slate-50 p-3 rounded border border-slate-100 mb-4">
+                        <p class="text-xs text-slate-600 italic">"Recalque da linha 2 do metrô de SP e patologias em edificações: uma abordagem por SAR."</p>
+                    </div>
+                    <a href="http://lattes.cnpq.br/8818133620232586" target="_blank" class="text-xs text-itaBlue font-bold hover:underline"><i class="fa-regular fa-id-card mr-1"></i> Lattes</a>
+                </div>
+
+            </div>
+
+            <h3 class="text-xl font-bold text-itaDark mb-8 pl-4 border-l-4 border-accent">Apoio Técnico</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100 group">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 rounded-full bg-slate-200 overflow-hidden relative">
+                            <img src="" alt="Nadinne" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 flex items-center justify-center text-slate-400"><i class="fa-solid fa-user"></i></div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-itaDark">MSc. Nadinne Oliveira</h4>
+                            <span class="text-xs text-slate-500 font-bold uppercase">Técnica em Geoprocessamento</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-500 mb-3">
+                        <strong>Formação:</strong> Mestre em Geografia (UFSM).<br>
+                        <strong>Keywords:</strong> Geoprocessamento, Cartografia, Sensoriamento Remoto.
+                    </p>
+                    <a href="http://lattes.cnpq.br/3915033815303466" target="_blank" class="text-xs text-itaBlue font-bold hover:underline"><i class="fa-regular fa-id-card mr-1"></i> Lattes</a>
+                </div>
+
             </div>
         </div>
     </section>
-
-    <footer class="bg-itaDark text-slate-400 py-12 border-t border-slate-800/50">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="text-center md:text-left">
-                <span class="text-white font-bold text-lg tracking-wide">LabGeo-ITA</span>
-                <p class="text-xs mt-2 text-slate-500">Desenvolvido para fins de pesquisa científica.</p>
-            </div>
-            <div class="flex gap-6">
-                <a href="#" class="hover:text-accent transition"><i class="fa-brands fa-github text-xl"></i></a>
-                <a href="#" class="hover:text-accent transition"><i class="fa-brands fa-researchgate text-xl"></i></a>
-                <a href="#" class="hover:text-accent transition"><i class="fa-solid fa-envelope text-xl"></i></a>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // AQUI ESTÁ A CORREÇÃO DO TEXTO NO SCRIPT TAMBÉM
-        const i18n = {
-            pt: {
-                nav_home: "Home",
-                nav_research: "Pesquisa",
-                nav_team: "Equipe",
-                nav_pubs: "Publicações",
-                
-                hero_title1: "Transformando o Geoespacial em",
-                hero_title2: "Aplicações em Ecologia, Eng. Civil e de Transportes", // TEXTO RESTAURADO
-                hero_desc: "Aplicações de Geociências na Engenharia Civil-Aeronáutica",
-                
-                btn_research: "Nossas Pesquisas",
-                btn_collab: "Colabore Conosco",
-                research_title: "Linhas de Pesquisa",
-                research_subtitle: "Áreas de atuação dos pesquisadores associados",
-                
-                card1_title: "Sensoriamento Remoto Aplicado à Infraestrutura e Transportes",
-                card1_desc: "Métodos e aplicações de SR óptico, SAR e LiDAR para diagnóstico, monitoramento e planejamento de infraestruturas críticas, com ênfase em aeroportos, transporte aéreo e sistemas urbanos.",
-                card2_title: "Geodinâmica, Geotecnia e Monitoramento de Deformações do Terreno",
-                card2_desc: "Interferometria SAR e dados de alta resolução para análise de subsidência, recalques e impactos geotécnicos associados a obras de infraestrutura urbana e subterrânea.",
-                card3_title: "Desastres, Hidrologia e Resiliência",
-                card3_desc: "Desenvolvimento de modelos e mapeamentos geoespaciais para avaliação de risco, vulnerabilidade e resiliência de sistemas socioambientais e infraestruturas frente a eventos extremos.",
-                card4_title: "Ecologia Espacial e Interações Fauna–Infraestrutura",
-                card4_desc: "Aplicação de geotecnologias para o estudo de sistemas ecológicos, grandes animais e interações críticas entre fauna, clima e infraestrutura, incluindo segurança operacional aeroportuária.",
-                card5_title: "Modelagem Geoespacial, Sistemas Complexos e Tomada de Decisão",
-                card5_desc: "Integração de geoprocessamento, estatística, análise multicritério e teoria de sistemas complexos adaptativos para suporte à decisão em engenharia, ecologia e planejamento territorial.",
-
-                team_title: "Pesquisadores Principais",
-                bio_1: "\"Focado na intersecção entre hidrologia e infraestrutura aeroportuária.\"",
-                bio_2: "\"Especialista em LiDAR, pavimentação e análise de deformações.\"",
-                pubs_title: "Publicações Selecionadas",
-                view_more: "Ver lista completa no Google Scholar →"
-            },
-            en: {
-                nav_home: "Home",
-                nav_research: "Research",
-                nav_team: "People",
-                nav_pubs: "Publications",
-                
-                hero_title1: "Turning Geospatial into",
-                hero_title2: "Ecology, Civil and Transport Engineering Applications", // TEXTO RESTAURADO
-                hero_desc: "Geosciences applications in Civil-Aeronautical Engineering",
-                
-                btn_research: "Our Research",
-                btn_collab: "Collaborations",
-                research_title: "Research Lines",
-                research_subtitle: "Areas of expertise of associated researchers",
-                
-                card1_title: "Remote Sensing Applied to Infrastructure and Transport",
-                card1_desc: "Methods and applications of optical RS, SAR, and LiDAR for diagnosis, monitoring, and planning of critical infrastructure, with emphasis on airports, air transport, and urban systems.",
-                card2_title: "Geodynamics, Geotechnics, and Terrain Deformation Monitoring",
-                card2_desc: "InSAR and high-resolution data for analyzing subsidence, settlement, and geotechnical impacts associated with urban and underground infrastructure works.",
-                card3_title: "Disasters, Hydrology, and Resilience",
-                card3_desc: "Development of geospatial models and mapping for risk assessment, vulnerability, and resilience of socio-environmental systems and infrastructure against extreme events.",
-                card4_title: "Spatial Ecology and Fauna-Infrastructure Interactions",
-                card4_desc: "Application of geotechnologies to study ecological systems, large animals, and critical interactions between fauna, climate, and infrastructure, including airport operational safety.",
-                card5_title: "Geospatial Modeling, Complex Systems, and Decision Making",
-                card5_desc: "Integration of geoprocessing, statistics, multi-criteria analysis, and complex adaptive systems theory for decision support in engineering, ecology, and territorial planning.",
-
-                team_title: "Key Researchers",
-                bio_1: "\"Focused on the intersection of hydrology and airport infrastructure.\"",
-                bio_2: "\"Specialist in LiDAR, pavement engineering, and deformation analysis.\"",
-                pubs_title: "Selected Publications",
-                view_more: "See full list on Google Scholar →"
-            }
-        };
-
-        function setLanguage(lang) {
-            document.querySelectorAll('[data-i18n]').forEach(element => {
-                const key = element.getAttribute('data-i18n');
-                if (i18n[lang][key]) {
-                    element.style.opacity = 0;
-                    setTimeout(() => {
-                        element.textContent = i18n[lang][key];
-                        element.style.opacity = 1;
-                    }, 200);
-                }
-            });
-
-            const btnPt = document.getElementById('btn-pt');
-            const btnEn = document.getElementById('btn-en');
-
-            if(lang === 'pt') {
-                btnPt.className = "px-3 py-1 rounded-full text-xs font-bold transition bg-white text-itaBlue shadow-sm";
-                btnEn.className = "px-3 py-1 rounded-full text-xs font-bold transition text-slate-500 hover:text-slate-700";
-            } else {
-                btnEn.className = "px-3 py-1 rounded-full text-xs font-bold transition bg-white text-itaBlue shadow-sm";
-                btnPt.className = "px-3 py-1 rounded-full text-xs font-bold transition text-slate-500 hover:text-slate-700";
-            }
-        }
-    </script>
-</body>
-</html>
