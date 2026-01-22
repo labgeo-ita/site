@@ -107,9 +107,9 @@
                 <a href="#pesquisa" class="px-8 py-3 bg-accent text-white font-semibold rounded-lg hover:bg-emerald-600 transition shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:transform hover:-translate-y-1" data-i18n="btn_research">
                     Nossas Pesquisas
                 </a>
-                <a href="#contato" class="px-8 py-3 border border-slate-500 text-slate-300 font-semibold rounded-lg hover:bg-white/10 hover:border-white transition backdrop-blur-sm" data-i18n="btn_collab">
+                <button onclick="openModal()" class="px-8 py-3 border border-slate-500 text-slate-300 font-semibold rounded-lg hover:bg-white/10 hover:border-white transition backdrop-blur-sm" data-i18n="btn_collab">
                     Colaborar Conosco
-                </a>
+                </button>
             </div>
         </div>
     </section>
@@ -130,7 +130,7 @@
                 <div class="group cursor-pointer">
                     <div class="h-64 rounded-2xl overflow-hidden relative shadow-lg mb-6">
                         <div class="absolute inset-0 bg-itaBlue/20 group-hover:bg-transparent transition duration-500 z-10"></div>
-                        <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=800" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                        <img src="./aeroporto.jpg" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
                         <div class="absolute bottom-4 left-4 z-20 bg-white/90 backdrop-blur px-3 py-1 rounded text-xs font-bold text-itaBlue">ENGENHARIA</div>
                     </div>
                     <h3 class="text-xl font-bold text-itaDark mb-2 group-hover:text-accent transition" data-i18n="card1_title">Sensoriamento Remoto Aplicado à Infraestrutura e Transportes</h3>
@@ -142,7 +142,7 @@
                 <div class="group cursor-pointer">
                     <div class="h-64 rounded-2xl overflow-hidden relative shadow-lg mb-6">
                         <div class="absolute inset-0 bg-itaBlue/20 group-hover:bg-transparent transition duration-500 z-10"></div>
-                        <img src="https://images.unsplash.com/photo-1558494949-ef526b0042a0?q=80&w=800" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                        <img src="./tunel.jpg" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
                         <div class="absolute bottom-4 left-4 z-20 bg-white/90 backdrop-blur px-3 py-1 rounded text-xs font-bold text-itaBlue">ENGENHARIA</div>
                     </div>
                     <h3 class="text-xl font-bold text-itaDark mb-2 group-hover:text-accent transition" data-i18n="card2_title">Geodinâmica, Geotecnia e Monitoramento de Deformações do Terreno</h3>
@@ -154,7 +154,7 @@
                 <div class="group cursor-pointer">
                     <div class="h-64 rounded-2xl overflow-hidden relative shadow-lg mb-6">
                         <div class="absolute inset-0 bg-itaBlue/20 group-hover:bg-transparent transition duration-500 z-10"></div>
-                        <img src="https://images.unsplash.com/photo-1518709414768-a88986a455b1?q=80&w=800" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                        <img src="./inundacao.jpg" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
                         <div class="absolute bottom-4 left-4 z-20 bg-white/90 backdrop-blur px-3 py-1 rounded text-xs font-bold text-itaBlue">SENSORIAMENTO REMOTO</div>
                     </div>
                     <h3 class="text-xl font-bold text-itaDark mb-2 group-hover:text-accent transition" data-i18n="card3_title">Desastres, Hidrologia e Resiliência</h3>
@@ -166,7 +166,7 @@
                 <div class="group cursor-pointer">
                     <div class="h-64 rounded-2xl overflow-hidden relative shadow-lg mb-6">
                         <div class="absolute inset-0 bg-itaBlue/20 group-hover:bg-transparent transition duration-500 z-10"></div>
-                        <img src="https://images.unsplash.com/photo-1440557653036-7933390cc25c?q=80&w=800" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                        <img src="./onca.jpg" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
                         <div class="absolute bottom-4 left-4 z-20 bg-white/90 backdrop-blur px-3 py-1 rounded text-xs font-bold text-itaBlue">ECOLOGIA</div>
                     </div>
                     <h3 class="text-xl font-bold text-itaDark mb-2 group-hover:text-accent transition" data-i18n="card4_title">Ecologia Espacial e Interações Fauna–Infraestrutura</h3>
@@ -178,7 +178,7 @@
                 <div class="group cursor-pointer">
                     <div class="h-64 rounded-2xl overflow-hidden relative shadow-lg mb-6">
                         <div class="absolute inset-0 bg-itaBlue/20 group-hover:bg-transparent transition duration-500 z-10"></div>
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                        <img src="./simulacao.jpg" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
                         <div class="absolute bottom-4 left-4 z-20 bg-white/90 backdrop-blur px-3 py-1 rounded text-xs font-bold text-itaBlue">SIMULAÇÃO</div>
                     </div>
                     <h3 class="text-xl font-bold text-itaDark mb-2 group-hover:text-accent transition" data-i18n="card5_title">Modelagem Geoespacial, Sistemas Complexos e Tomada de Decisão</h3>
@@ -450,10 +450,27 @@
             <div class="flex gap-6">
                 <a href="#" class="hover:text-accent transition"><i class="fa-brands fa-github text-xl"></i></a>
                 <a href="#" class="hover:text-accent transition"><i class="fa-brands fa-researchgate text-xl"></i></a>
-                <a href="mailto:contato@labgeo.ita.br" class="hover:text-accent transition"><i class="fa-solid fa-envelope text-xl"></i></a>
+                <a href="mailto:emarraut@ita.br" class="hover:text-accent transition"><i class="fa-solid fa-envelope text-xl"></i></a>
             </div>
         </div>
     </footer>
+
+    <div id="collab-modal" class="hidden fixed inset-0 z-[60] flex items-center justify-center bg-black/50 backdrop-blur-sm transition-opacity duration-300">
+        <div class="bg-white p-8 rounded-2xl shadow-2xl max-w-md w-full relative mx-4 transform transition-all scale-100">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600"><i class="fa-solid fa-xmark text-xl"></i></button>
+            <h3 class="text-xl font-bold text-itaDark mb-2" data-i18n="modal_title">Colaborar Conosco</h3>
+            <p class="text-sm text-slate-500 mb-6" data-i18n="modal_desc">Selecione uma opção para entrar em contato:</p>
+            
+            <div class="space-y-3">
+                <a href="mailto:emarraut@ita.br" class="flex items-center justify-center gap-2 w-full py-3 bg-itaBlue text-white font-semibold rounded-lg hover:bg-slate-800 transition shadow-lg">
+                    <i class="fa-solid fa-envelope"></i> <span data-i18n="btn_email_send">Enviar E-mail</span>
+                </a>
+                <a href="https://www.civil.ita.br/posgrad/processo_seletivo_ad.php" target="_blank" class="flex items-center justify-center gap-2 w-full py-3 border border-slate-200 text-slate-600 font-semibold rounded-lg hover:bg-slate-50 hover:text-itaBlue transition">
+                    <i class="fa-solid fa-graduation-cap"></i> <span data-i18n="btn_selection_process">Processo Seletivo ITA</span>
+                </a>
+            </div>
+        </div>
+    </div>
 
     <script>
         const i18n = {
@@ -472,6 +489,12 @@
                 research_title: "Linhas de Pesquisa",
                 research_subtitle: "Áreas de atuação dos pesquisadores associados",
                 
+                // Modal
+                modal_title: "Colaborar Conosco",
+                modal_desc: "Selecione uma opção para entrar em contato:",
+                btn_email_send: "Enviar E-mail",
+                btn_selection_process: "Processo Seletivo ITA",
+
                 // Research Lines
                 card1_title: "Sensoriamento Remoto Aplicado à Infraestrutura e Transportes",
                 card1_desc: "Métodos e aplicações de SR óptico, SAR e LiDAR para diagnóstico, monitoramento e planejamento de infraestruturas críticas, com ênfase em aeroportos, transporte aéreo e sistemas urbanos.",
@@ -532,10 +555,16 @@
                 hero_desc: "Geosciences applications in Civil-Aeronautical Engineering",
                 
                 btn_research: "Our Research",
-                btn_collab: "Collaborations",
+                btn_collab: "Collaborate",
                 research_title: "Research Lines",
                 research_subtitle: "Areas of expertise of associated researchers",
                 
+                // Modal
+                modal_title: "Collaborate with Us",
+                modal_desc: "Choose an option to contact us:",
+                btn_email_send: "Send Email",
+                btn_selection_process: "ITA Selection Process",
+
                 card1_title: "Remote Sensing Applied to Infrastructure and Transport",
                 card1_desc: "Methods and applications of optical RS, SAR, and LiDAR for diagnosis, monitoring, and planning of critical infrastructure, with emphasis on airports, air transport, and urban systems.",
                 card2_title: "Geodynamics, Geotechnics, and Terrain Deformation Monitoring",
@@ -592,7 +621,7 @@
                 if (i18n[lang][key]) {
                     element.style.opacity = 0;
                     setTimeout(() => {
-                        element.innerHTML = i18n[lang][key]; // innerHTML allows bold tags
+                        element.innerHTML = i18n[lang][key]; 
                         element.style.opacity = 1;
                     }, 200);
                 }
@@ -607,6 +636,23 @@
             } else {
                 btnEn.className = "px-3 py-1 rounded-full text-xs font-bold transition bg-white text-itaBlue shadow-sm";
                 btnPt.className = "px-3 py-1 rounded-full text-xs font-bold transition text-slate-500 hover:text-slate-700";
+            }
+        }
+
+        // Modal Functions
+        function openModal() {
+            document.getElementById('collab-modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('collab-modal').classList.add('hidden');
+        }
+
+        // Close on click outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('collab-modal');
+            if (event.target == modal) {
+                closeModal();
             }
         }
     </script>
