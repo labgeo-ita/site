@@ -89,7 +89,7 @@
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#home" class="text-sm font-medium text-slate-600 hover:text-itaBlue transition" data-i18n="nav_home">Home</a>
                     <a href="#pesquisa" class="text-sm font-medium text-slate-600 hover:text-itaBlue transition" data-i18n="nav_research">Research</a>
-                    <a href="#equipe" class="text-sm font-medium text-slate-600 hover:text-itaBlue transition" data-i18n="nav_team">Team</a>
+                    <a href="#projetos" class="text-sm font-medium text-slate-600 hover:text-itaBlue transition" data-i18n="nav_projects">Projects</a> <a href="#equipe" class="text-sm font-medium text-slate-600 hover:text-itaBlue transition" data-i18n="nav_team">Team</a>
                     <a href="#publicacoes" class="text-sm font-medium text-slate-600 hover:text-itaBlue transition" data-i18n="nav_pubs">Publications</a>
                     
                     <div class="flex items-center bg-slate-200 rounded-full p-1 ml-4">
@@ -205,7 +205,54 @@
         </div>
     </section>
 
-    <section id="equipe" class="py-24 bg-slate-50 border-t border-slate-200">
+    <section id="projetos" class="py-24 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-itaDark" data-i18n="proj_title">Projetos & Financiamento</h2>
+                <div class="h-1 w-20 bg-accent mx-auto mt-4"></div>
+            </div>
+
+            <h3 class="text-lg font-bold text-itaDark mb-6 flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span> <span data-i18n="proj_ongoing">Em Andamento</span></h3>
+            <div class="grid md:grid-cols-2 gap-6 mb-12">
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200 border-l-4 border-l-accent">
+                    <div class="flex justify-between items-start">
+                        <h4 class="font-bold text-itaBlue text-lg">MESA-A (Automatiza)</h4>
+                        <span class="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded">2025 - Atual</span>
+                    </div>
+                    <p class="text-slate-600 text-sm mt-2">Metodologia de Escolha de Sítios Aeroportuários - Automatização e aprimoramento de processos de seleção com ferramentas geoespaciais.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200 border-l-4 border-l-accent">
+                    <div class="flex justify-between items-start">
+                        <h4 class="font-bold text-itaBlue text-lg">LESSONIA</h4>
+                        <span class="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded">2023 - Atual</span>
+                    </div>
+                    <p class="text-slate-600 text-sm mt-2">Projeto focado no monitoramento e análise de sistemas ambientais e infraestrutura através de sensoriamento remoto avançado.</p>
+                </div>
+            </div>
+
+            <h3 class="text-lg font-bold text-itaDark mb-6 flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-slate-400"></span> <span data-i18n="proj_finished">Finalizados</span></h3>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200 opacity-80 hover:opacity-100 transition">
+                    <div class="flex justify-between items-start">
+                        <h4 class="font-bold text-slate-700 text-lg">MESA</h4>
+                        <span class="bg-slate-100 text-slate-600 text-xs font-bold px-2 py-1 rounded">2019 - 2023</span>
+                    </div>
+                    <p class="text-slate-500 text-sm mt-2">Desenvolvimento da metodologia base para seleção de novos sítios aeroportuários regionais no Brasil.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200 opacity-80 hover:opacity-100 transition">
+                    <div class="flex justify-between items-start">
+                        <h4 class="font-bold text-slate-700 text-lg">ELOS (FAPESP)</h4>
+                        <span class="bg-slate-100 text-slate-600 text-xs font-bold px-2 py-1 rounded">2019 - 2023</span>
+                    </div>
+                    <p class="text-slate-500 text-sm mt-2">Estudos de logística e otimização de sistemas, com suporte da FAPESP.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="equipe" class="py-24 bg-white border-t border-slate-200">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-16">
                 <h2 class="text-3xl font-bold text-itaDark" data-i18n="team_title">Nossa Equipe</h2>
@@ -213,7 +260,7 @@
             </div>
             
             <div class="flex justify-center mb-16">
-                <div class="w-full max-w-4xl bg-white p-8 md:p-10 rounded-2xl shadow-lg border-l-4 border-itaBlue flex flex-col md:flex-row gap-8 items-center md:items-start">
+                <div class="w-full max-w-4xl bg-slate-50 p-8 md:p-10 rounded-2xl shadow-lg border-l-4 border-itaBlue flex flex-col md:flex-row gap-8 items-center md:items-start">
                     <div class="w-40 h-40 flex-shrink-0 rounded-full bg-slate-200 overflow-hidden border-4 border-white shadow-md relative">
                         <img src="./eduardo.jpg" alt="Dr. Eduardo Arraut" class="w-full h-full object-cover">
                     </div>
@@ -228,7 +275,7 @@
                             <p class="text-slate-600 text-sm leading-relaxed" data-i18n="bio_eduardo">
                                 <strong class="text-slate-800">Formação & Atuação:</strong> Professor de Geomática no ITA. Especialista em Sistemas Complexos Adaptativos, Sensoriamento Remoto, Ecologia de Grandes Animais e Infraestrutura Aeronáutica.
                             </p>
-                            <div class="bg-slate-50 p-3 rounded-lg border border-slate-100">
+                            <div class="bg-white p-3 rounded-lg border border-slate-200">
                                 <span class="text-xs font-bold text-accent uppercase block mb-1">Foco Atual</span>
                                 <p class="text-xs text-slate-600 italic">Seleção de sítios aeroportuários, mitigação de riscos de inundação e monitoramento ambiental.</p>
                             </div>
@@ -239,7 +286,7 @@
 
             <h3 class="text-xl font-bold text-itaDark mb-8 pl-4 border-l-4 border-accent" data-i18n="title_researchers">Pesquisadores Associados</h3>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100">
+                <div class="bg-slate-50 p-6 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100">
                     <div class="flex items-start gap-4 mb-4">
                         <div class="w-16 h-16 rounded-full bg-slate-200 overflow-hidden relative flex-shrink-0">
                             <img src="./kaian.gif" alt="Kaian" class="w-full h-full object-cover">
@@ -256,7 +303,7 @@
                         <strong>Formação:</strong> Doutor em Engenharia Matemática (UPM).<br>
                         <strong>Áreas de Interesse:</strong> Criosfera, Aprendizado de Máquina, Fusão de Dados.
                     </p>
-                    <div class="bg-slate-50 p-3 rounded border border-slate-100">
+                    <div class="bg-white p-3 rounded border border-slate-200">
                         <p class="text-xs text-slate-600 italic">"Mapping of Glacier Fractures in Antarctica via Remote Sensing Data Fusion."</p>
                     </div>
                 </div>
@@ -265,7 +312,7 @@
             <h3 class="text-xl font-bold text-itaDark mb-8 pl-4 border-l-4 border-accent" data-i18n="title_students">Doutorandos & Mestrandos</h3>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
 
-                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100">
+                <div class="bg-slate-50 p-6 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100">
                     <div class="flex items-start gap-4 mb-4">
                         <div class="w-16 h-16 rounded-full bg-slate-200 overflow-hidden relative flex-shrink-0">
                             <img src="./aluizio.jpeg" alt="Aluizio" class="w-full h-full object-cover">
@@ -282,12 +329,12 @@
                         <strong>Formação:</strong> Mestre em Sensoriamento Remoto (INPE) e Geógrafo (UFMG).<br>
                         <strong>Áreas de Interesse:</strong> Hidrologia, Risco de Inundação, Planejamento Aeroportuário.
                     </p>
-                    <div class="bg-slate-50 p-3 rounded border border-slate-100">
+                    <div class="bg-white p-3 rounded border border-slate-200">
                         <p class="text-xs text-slate-600 italic">"A Geospatial Model for Resilient Airport Location Assessment in Brazil."</p>
                     </div>
                 </div>
 
-                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100">
+                <div class="bg-slate-50 p-6 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100">
                     <div class="flex items-start gap-4 mb-4">
                         <div class="w-16 h-16 rounded-full bg-slate-200 overflow-hidden relative flex-shrink-0">
                             <img src="./ze.gif" alt="Ezequiel" class="w-full h-full object-cover">
@@ -304,12 +351,12 @@
                         <strong>Formação:</strong> Mestre em Sensoriamento Remoto (INPE) e Engenheiro Civil (UEMA).<br>
                         <strong>Áreas de Interesse:</strong> LiDAR, Pavimentação, Eng. de Transportes.
                     </p>
-                    <div class="bg-slate-50 p-3 rounded border border-slate-100">
+                    <div class="bg-white p-3 rounded border border-slate-200">
                         <p class="text-xs text-slate-600 italic">"Monitoramento Preditivo da Saúde Estrutural de Pavimentos Aeroportuários (InSAR + LiDAR)."</p>
                     </div>
                 </div>
 
-                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100">
+                <div class="bg-slate-50 p-6 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100">
                     <div class="flex items-start gap-4 mb-4">
                         <div class="w-16 h-16 rounded-full bg-slate-200 overflow-hidden relative flex-shrink-0">
                             <img src="./leon.gif" alt="Leon" class="w-full h-full object-cover">
@@ -326,12 +373,12 @@
                         <strong>Formação:</strong> Eng. Ambiental, Mestre em Geociências (UnB).<br>
                         <strong>Áreas de Interesse:</strong> Análise Multicritério, Planejamento Ambiental, Risco de Fauna.
                     </p>
-                    <div class="bg-slate-50 p-3 rounded border border-slate-100">
+                    <div class="bg-white p-3 rounded border border-slate-200">
                         <p class="text-xs text-slate-600 italic">"Interações aéreas no entorno de aeroportos dos EUA entre aeronaves e aves."</p>
                     </div>
                 </div>
 
-                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100">
+                <div class="bg-slate-50 p-6 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100">
                     <div class="flex items-start gap-4 mb-4">
                         <div class="w-16 h-16 rounded-full bg-slate-200 overflow-hidden relative flex-shrink-0">
                             <img src="./elida.gif" alt="Élida" class="w-full h-full object-cover">
@@ -348,12 +395,12 @@
                         <strong>Formação:</strong> Meteorologista (UFPA).<br>
                         <strong>Áreas de Interesse:</strong> Meteorologia Sinótica, Ecologia, Climatologia.
                     </p>
-                    <div class="bg-slate-50 p-3 rounded border border-slate-100">
+                    <div class="bg-white p-3 rounded border border-slate-200">
                         <p class="text-xs text-slate-600 italic">"Fatores Meteorológicos Influenciadores do Voo de Aves Planadoras."</p>
                     </div>
                 </div>
 
-                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100">
+                <div class="bg-slate-50 p-6 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100">
                     <div class="flex items-start gap-4 mb-4">
                         <div class="w-16 h-16 rounded-full bg-slate-200 overflow-hidden relative flex-shrink-0">
                             <img src="./bruna.gif" alt="Bruna" class="w-full h-full object-cover">
@@ -370,7 +417,7 @@
                         <strong>Formação:</strong> Geóloga (USP).<br>
                         <strong>Áreas de Interesse:</strong> Geotecnia, Interferometria SAR, Obras Subterrâneas.
                     </p>
-                    <div class="bg-slate-50 p-3 rounded border border-slate-100">
+                    <div class="bg-white p-3 rounded border border-slate-200">
                         <p class="text-xs text-slate-600 italic">"Recalque da linha 2 do metrô de SP e patologias em edificações: uma abordagem por SAR."</p>
                     </div>
                 </div>
@@ -379,7 +426,7 @@
 
             <h3 class="text-xl font-bold text-itaDark mb-8 pl-4 border-l-4 border-accent" data-i18n="title_tech">Apoio Técnico</h3>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100">
+                <div class="bg-slate-50 p-6 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100">
                     <div class="flex items-start gap-4 mb-4">
                         <div class="w-16 h-16 rounded-full bg-slate-200 overflow-hidden relative flex-shrink-0">
                             <img src="./nadinne.gif" alt="Nadinne" class="w-full h-full object-cover">
@@ -400,96 +447,117 @@
             </div>
 
             <h3 class="text-xl font-bold text-itaDark mb-8 pl-4 border-l-4 border-accent" data-i18n="title_collaborators">Rede de Colaboração Acadêmica</h3>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-16">
                 
-                <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100 flex flex-col items-center text-center">
-                    <div class="w-16 h-16 rounded-full bg-slate-100 mb-3 overflow-hidden relative">
+                <div class="bg-slate-50 p-4 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-full bg-white mb-3 overflow-hidden relative">
                         <div class="absolute inset-0 flex items-center justify-center text-slate-300"><i class="fa-solid fa-user-tie"></i></div>
                     </div>
                     <h5 class="font-bold text-slate-800 text-xs">Prof. Dr. David Macdonald</h5>
                     <span class="text-[10px] text-slate-500 mt-1">University of Oxford</span>
                 </div>
 
-                <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100 flex flex-col items-center text-center">
-                    <div class="w-16 h-16 rounded-full bg-slate-100 mb-3 overflow-hidden relative">
+                <div class="bg-slate-50 p-4 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-full bg-white mb-3 overflow-hidden relative">
                         <div class="absolute inset-0 flex items-center justify-center text-slate-300"><i class="fa-solid fa-user-tie"></i></div>
                     </div>
                     <h5 class="font-bold text-slate-800 text-xs">Prof. Dr. Denise Ferrari</h5>
                     <span class="text-[10px] text-slate-500 mt-1">Divisão de Ciências Fundamentais - ITA</span>
                 </div>
 
-                <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100 flex flex-col items-center text-center">
-                    <div class="w-16 h-16 rounded-full bg-slate-100 mb-3 overflow-hidden relative">
+                <div class="bg-slate-50 p-4 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-full bg-white mb-3 overflow-hidden relative">
                         <div class="absolute inset-0 flex items-center justify-center text-slate-300"><i class="fa-solid fa-user-tie"></i></div>
                     </div>
                     <h5 class="font-bold text-slate-800 text-xs">Prof. Dr. Dimas Betioli Ribeiro</h5>
                     <span class="text-[10px] text-slate-500 mt-1">Dept. de Geotecnia - ITA</span>
                 </div>
 
-                <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100 flex flex-col items-center text-center">
-                    <div class="w-16 h-16 rounded-full bg-slate-100 mb-3 overflow-hidden relative">
+                <div class="bg-slate-50 p-4 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-full bg-white mb-3 overflow-hidden relative">
                         <div class="absolute inset-0 flex items-center justify-center text-slate-300"><i class="fa-solid fa-user-tie"></i></div>
                     </div>
                     <h5 class="font-bold text-slate-800 text-xs">Prof. Dr. Evandro José da Silva</h5>
                     <span class="text-[10px] text-slate-500 mt-1">Dept. de Transporte Aéreo - ITA</span>
                 </div>
 
-                <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100 flex flex-col items-center text-center">
-                    <div class="w-16 h-16 rounded-full bg-slate-100 mb-3 overflow-hidden relative">
+                <div class="bg-slate-50 p-4 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-full bg-white mb-3 overflow-hidden relative">
                         <div class="absolute inset-0 flex items-center justify-center text-slate-300"><i class="fa-solid fa-user-tie"></i></div>
                     </div>
                     <h5 class="font-bold text-slate-800 text-xs">Prof. Dr. Flávio M. Kuwajima</h5>
                     <span class="text-[10px] text-slate-500 mt-1">ITA</span>
                 </div>
 
-                <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100 flex flex-col items-center text-center">
-                    <div class="w-16 h-16 rounded-full bg-slate-100 mb-3 overflow-hidden relative">
+                <div class="bg-slate-50 p-4 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-full bg-white mb-3 overflow-hidden relative">
                         <div class="absolute inset-0 flex items-center justify-center text-slate-300"><i class="fa-solid fa-user-tie"></i></div>
                     </div>
                     <h5 class="font-bold text-slate-800 text-xs">Prof. Dr. Marcelo X. Guterres</h5>
                     <span class="text-[10px] text-slate-500 mt-1">Dept. de Transporte Aéreo - ITA</span>
                 </div>
 
-                <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100 flex flex-col items-center text-center">
-                    <div class="w-16 h-16 rounded-full bg-slate-100 mb-3 overflow-hidden relative">
+                <div class="bg-slate-50 p-4 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-full bg-white mb-3 overflow-hidden relative">
                         <div class="absolute inset-0 flex items-center justify-center text-slate-300"><i class="fa-solid fa-user-tie"></i></div>
                     </div>
                     <h5 class="font-bold text-slate-800 text-xs">Prof. Dr. Mats Pettersson</h5>
                     <span class="text-[10px] text-slate-500 mt-1">Blekinge Institute of Technology</span>
                 </div>
 
-                <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100 flex flex-col items-center text-center">
-                    <div class="w-16 h-16 rounded-full bg-slate-100 mb-3 overflow-hidden relative">
+                <div class="bg-slate-50 p-4 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-full bg-white mb-3 overflow-hidden relative">
                         <div class="absolute inset-0 flex items-center justify-center text-slate-300"><i class="fa-solid fa-user-tie"></i></div>
                     </div>
                     <h5 class="font-bold text-slate-800 text-xs">Prof. Dr. Renato Machado</h5>
                     <span class="text-[10px] text-slate-500 mt-1">Divisão de Eng. Eletrônica - ITA</span>
                 </div>
 
-                <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100 flex flex-col items-center text-center">
-                    <div class="w-16 h-16 rounded-full bg-slate-100 mb-3 overflow-hidden relative">
+                <div class="bg-slate-50 p-4 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-full bg-white mb-3 overflow-hidden relative">
                         <div class="absolute inset-0 flex items-center justify-center text-slate-300"><i class="fa-solid fa-user-tie"></i></div>
                     </div>
                     <h5 class="font-bold text-slate-800 text-xs">Prof. Dr. Robert Kenward</h5>
                     <span class="text-[10px] text-slate-500 mt-1">UK Centre For Ecology & Hydrology</span>
                 </div>
 
-                <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100 flex flex-col items-center text-center">
-                    <div class="w-16 h-16 rounded-full bg-slate-100 mb-3 overflow-hidden relative">
+                <div class="bg-slate-50 p-4 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-full bg-white mb-3 overflow-hidden relative">
                         <div class="absolute inset-0 flex items-center justify-center text-slate-300"><i class="fa-solid fa-user-tie"></i></div>
                     </div>
                     <h5 class="font-bold text-slate-800 text-xs">Prof. Dr. Volker Grimm</h5>
                     <span class="text-[10px] text-slate-500 mt-1">Helmholtz-Zentrum (UFZ)</span>
                 </div>
 
-                <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100 flex flex-col items-center text-center">
-                    <div class="w-16 h-16 rounded-full bg-slate-100 mb-3 overflow-hidden relative">
+                <div class="bg-slate-50 p-4 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-full bg-white mb-3 overflow-hidden relative">
                         <div class="absolute inset-0 flex items-center justify-center text-slate-300"><i class="fa-solid fa-user-tie"></i></div>
                     </div>
                     <h5 class="font-bold text-slate-800 text-xs">Prof. Dr. Wilson Cabral Jr.</h5>
                     <span class="text-[10px] text-slate-500 mt-1">Dept. de Recursos Hídricos - ITA</span>
                 </div>
 
+            </div>
+
+            <h3 class="text-xl font-bold text-itaDark mb-8 pl-4 border-l-4 border-accent" data-i18n="title_alumni">Alumni (Ex-Alunos)</h3>
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="font-bold text-itaBlue mb-4 border-b pb-2" data-i18n="alumni_doctors">Doutores & Mestres</h4>
+                        <ul class="space-y-3 text-sm text-slate-600">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-user-graduate text-accent"></i> <span><strong>Bruna Fabrin</strong> - Doutora (PhD, 2024) - Co-orientação</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-user-graduate text-accent"></i> <span><strong>Thiago Cypreste</strong> - Mestre (MSc, 2024)</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-itaBlue mb-4 border-b pb-2" data-i18n="alumni_grad">Graduados (Engenharia Civil-Aeronáutica)</h4>
+                        <ul class="space-y-3 text-sm text-slate-600">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-certificate text-slate-400"></i> <span><strong>Luan Torres</strong> - Engenheiro (TG T19)</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-certificate text-slate-400"></i> <span><strong>João Carlos</strong> - Engenheiro (TG T23)</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-certificate text-slate-400"></i> <span><strong>Letícia Rodrigues</strong> - Engenheira (TG T25)</span></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -614,6 +682,7 @@
             pt: {
                 nav_home: "Home",
                 nav_research: "Pesquisa",
+                nav_projects: "Projetos", // NEW KEY
                 nav_team: "Equipe",
                 nav_pubs: "Publicações",
                 
@@ -643,12 +712,20 @@
                 card5_title: "Modelagem Geoespacial, Sistemas Complexos e Tomada de Decisão",
                 card5_desc: "Integração de geoprocessamento, estatística, análise multicritério e teoria de sistemas complexos adaptativos para suporte à decisão em engenharia, ecologia e planejamento territorial.",
 
+                // PROJECT TRANSLATIONS (NEW)
+                proj_title: "Projetos & Financiamento",
+                proj_ongoing: "Em Andamento",
+                proj_finished: "Finalizados",
+
                 // TEAM TRANSLATIONS
                 team_title: "Nossa Equipe",
                 title_researchers: "Pesquisadores Associados",
                 title_students: "Doutorandos & Mestrandos",
                 title_tech: "Apoio Técnico",
                 title_collaborators: "Rede de Colaboração Acadêmica",
+                title_alumni: "Alumni (Ex-Alunos)", // NEW KEY
+                alumni_doctors: "Doutores & Mestres", // NEW KEY
+                alumni_grad: "Graduados (Engenharia Civil-Aeronáutica)", // NEW KEY
 
                 // Leader
                 role_eduardo: "Líder do Laboratório & Professor",
@@ -688,6 +765,7 @@
             en: {
                 nav_home: "Home",
                 nav_research: "Research",
+                nav_projects: "Projects",
                 nav_team: "People",
                 nav_pubs: "Publications",
                 
@@ -717,12 +795,20 @@
                 card5_title: "Geospatial Modeling, Complex Systems, and Decision Making",
                 card5_desc: "Integration of geoprocessing, statistics, multi-criteria analysis, and complex adaptive systems theory for decision support in engineering, ecology, and territorial planning.",
 
+                // PROJECTS TRANSLATIONS
+                proj_title: "Projects & Funding",
+                proj_ongoing: "Ongoing",
+                proj_finished: "Finished",
+
                 // TEAM TRANSLATIONS
                 team_title: "Our Team",
                 title_researchers: "Associated Researchers",
                 title_students: "PhD & MSc Students",
                 title_tech: "Technical Support",
                 title_collaborators: "Academic Collaboration Network",
+                title_alumni: "Alumni (Former Members)",
+                alumni_doctors: "PhD & MSc",
+                alumni_grad: "Graduates (Civil-Aeronautical Eng.)",
 
                 // Leader
                 role_eduardo: "Head of Laboratory & Professor",
@@ -752,6 +838,7 @@
                 role_nadinne: "Geoprocessing Technician",
                 bio_nadinne: "<strong>Background:</strong> MSc in Geography (UFSM).<br><strong>Interest Areas:</strong> Geoprocessing, Cartography, Remote Sensing.",
 
+                // Pubs Tabs
                 pubs_title: "Selected Publications",
                 view_more: "See full list on Google Scholar →",
                 tab_journals: "Journal Papers",
