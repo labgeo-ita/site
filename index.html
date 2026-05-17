@@ -327,6 +327,11 @@
                 </div>
             </div>
 
+            <h3 class="text-xl font-bold text-itaDark mb-8 pl-4 border-l-4 border-accent" data-i18n="title_students">Doutorandos & Mestrandos</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 items-stretch justify-center">
+
+
+                       
                     <div class="bg-slate-50 p-6 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100 flex flex-col h-full">
                     <div class="flex items-start gap-4 mb-4">
                         <div class="w-16 h-16 rounded-full bg-slate-200 overflow-hidden relative flex-shrink-0">
@@ -349,8 +354,6 @@
                     </div>
                 </div>
 
-            <h3 class="text-xl font-bold text-itaDark mb-8 pl-4 border-l-4 border-accent" data-i18n="title_students">Doutorandos & Mestrandos</h3>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 items-stretch justify-center">
 
                 <div class="bg-slate-50 p-6 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100 flex flex-col h-full">
                     <div class="flex items-start gap-4 mb-4">
@@ -663,7 +666,21 @@
                 </div>
             </div>
 
+            <section id="publicacoes" class="py-24 bg-white relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="mb-10 text-center">
+                <h2 class="text-3xl font-bold text-itaDark mb-6" data-i18n="pubs_title">Publicações Selecionadas</h2>
+                
+                <div class="flex flex-wrap justify-center gap-2 md:gap-4">
+                    <button onclick="switchTab('periodicos')" id="btn-periodicos" class="px-4 py-2 rounded-full border text-sm font-bold transition tab-active" data-i18n="tab_journals">Artigos em Periódicos</button>
+                    <button onclick="switchTab('livros')" id="btn-livros" class="px-4 py-2 rounded-full border text-sm font-bold transition tab-inactive" data-i18n="tab_books">Livros & Capítulos</button>
+                    <button onclick="switchTab('congressos')" id="btn-congressos" class="px-4 py-2 rounded-full border text-sm font-bold transition tab-inactive" data-i18n="tab_conf">Anais de Congressos</button>
+                    <button onclick="switchTab('tecnicos')" id="btn-tecnicos" class="px-4 py-2 rounded-full border text-sm font-bold transition tab-inactive" data-i18n="tab_tech">Trabalhos Técnicos</button>
+                </div>
+            </div>
+
             <div id="tab-periodicos" class="space-y-6">
+                <!-- 2026 -->
                 <div class="flex flex-col md:flex-row gap-6 bg-slate-50 p-6 rounded-xl border border-slate-100 hover:border-itaBlue/30 hover:shadow-lg transition duration-300">
                     <div class="min-w-[80px] flex flex-col items-center justify-center border-r border-slate-200 pr-6">
                         <span class="text-2xl font-bold text-slate-300">2026</span>
@@ -674,7 +691,7 @@
                             Flood Detection in Optical Systems: A Novel Approach to Overcome Cloud Cover with DEM Data.
                         </h4>
                         <p class="text-slate-600 text-sm mb-2">
-                            <span class="font-semibold text-slate-800">Authors:</span> Maia, A.B., Rennó, C. D., Novo., E. M. L. M., Mira, I. R. C.
+                            <span class="font-semibold text-slate-800">Authors:</span> Maia, A.B., Rennó, C. D., Novo, E. M. L. M., Mira, I. R. C.
                         </p>
                         <p class="text-slate-500 text-xs italic mb-3">Published in: IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing</p>
                         
@@ -685,6 +702,78 @@
 
                         <div class="flex gap-3">
                             <a href="https://ieeexplore.ieee.org/document/11269668/" target="_blank" class="text-xs font-bold text-itaBlue border border-itaBlue px-3 py-1 rounded hover:bg-itaBlue hover:text-white transition"><i class="fa-solid fa-arrow-up-right-from-square"></i> Acessar Artigo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-6 bg-slate-50 p-6 rounded-xl border border-slate-100 hover:border-itaBlue/30 hover:shadow-lg transition duration-300">
+                    <div class="min-w-[80px] flex flex-col items-center justify-center border-r border-slate-200 pr-6">
+                        <span class="text-2xl font-bold text-slate-300">2026</span>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold text-itaDark mb-2 hover:text-itaBlue cursor-pointer">
+                            Flooding in the Tamanduateí River Hydrographic Basin: A Spatial and Multifactorial Analysis.
+                        </h4>
+                        <p class="text-slate-600 text-sm mb-2">
+                            <span class="font-semibold text-slate-800">Authors:</span> De Mira, Í. R. C., Maia, A. B., Monteiro, A. M. V., Santos, L. B. L., Rennó, C. D.
+                        </p>
+                        <p class="text-slate-500 text-xs italic mb-3">Published in: Transactions in GIS</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-[10px] uppercase font-bold bg-blue-100 text-blue-700 px-2 py-1 rounded">Hidrologia</span>
+                            <span class="text-[10px] uppercase font-bold bg-slate-200 text-slate-600 px-2 py-1 rounded"><i class="fa-solid fa-user"></i> Aluizio Maia</span>
+                        </div>
+
+                        <div class="flex gap-3">
+                            <a href= "https://doi.org/10.1111/tgis.70213" target="_blank" class="text-xs font-bold text-itaBlue border border-itaBlue px-3 py-1 rounded hover:bg-itaBlue hover:text-white transition"><i class="fa-solid fa-arrow-up-right-from-square"></i> Acessar Artigo</a>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="flex flex-col md:flex-row gap-6 bg-slate-50 p-6 rounded-xl border border-slate-100 hover:border-itaBlue/30 hover:shadow-lg transition duration-300">
+                    <div class="min-w-[80px] flex flex-col items-center justify-center border-r border-slate-200 pr-6">
+                        <span class="text-2xl font-bold text-slate-300">2026</span>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold text-itaDark mb-2 hover:text-itaBlue cursor-pointer">
+                            Urban Morphology and Infrastructure Patterns: A LiDAR-Based 3D Cluster Analysis Using Verticalization as a Proxy.
+                        </h4>
+                        <p class="text-slate-600 text-sm mb-2">
+                            <span class="font-semibold text-slate-800">Authors:</span> Rocha, E. S.; Maia, A. B.; Almeida, C. M.; Ruiz, P. R. S.
+                        </p>
+                        <p class="text-slate-500 text-xs italic mb-3">Published in: ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-[10px] uppercase font-bold bg-emerald-100 text-emerald-700 px-2 py-1 rounded">LiDAR / SR</span>
+                            <span class="text-[10px] uppercase font-bold bg-slate-200 text-slate-600 px-2 py-1 rounded"><i class="fa-solid fa-user"></i> Ezequiel Rocha, Aluizio Maia</span>
+                        </div>
+                         <div class="flex gap-3">
+                            <a href="https://isprs-annals.copernicus.org/articles/X-3-W4-2025/313/2026/" class="text-xs font-bold text-itaBlue border border-itaBlue px-3 py-1 rounded hover:bg-itaBlue hover:text-white transition"><i class="fa-solid fa-arrow-up-right-from-square"></i> Acessar Artigo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2025 -->
+                <div class="flex flex-col md:flex-row gap-6 bg-slate-50 p-6 rounded-xl border border-slate-100 hover:border-itaBlue/30 hover:shadow-lg transition duration-300">
+                    <div class="min-w-[80px] flex flex-col items-center justify-center border-r border-slate-200 pr-6">
+                        <span class="text-2xl font-bold text-slate-300">2025</span>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold text-itaDark mb-2 hover:text-itaBlue cursor-pointer">
+                            A reconstruction of the ice thickness of the Antarctic Peninsula Ice Sheet north of 70°-S.
+                        </h4>
+                        <p class="text-slate-600 text-sm mb-2">
+                            <span class="font-semibold text-slate-800">Authors:</span> Shahateet, K.; Fürst, J.; Navarro, F.; Seehaus, T.; Farinotti, D.; Braun, M.
+                        </p>
+                        <p class="text-slate-500 text-xs italic mb-3">Published in: The Cryosphere</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-[10px] uppercase font-bold bg-cyan-100 text-cyan-700 px-2 py-1 rounded">Glaciologia</span>
+                            <span class="text-[10px] uppercase font-bold bg-slate-200 text-slate-600 px-2 py-1 rounded"><i class="fa-solid fa-user"></i> Kaian Shahateet</span>
+                        </div>
+
+                        <div class="flex gap-3">
+                            <a href="https://tc.copernicus.org/articles/19/1577/2025/" target="_blank" class="text-xs font-bold text-itaBlue border border-itaBlue px-3 py-1 rounded hover:bg-itaBlue hover:text-white transition"><i class="fa-solid fa-arrow-up-right-from-square"></i> Acessar Artigo</a>
                         </div>
                     </div>
                 </div>
@@ -713,29 +802,6 @@
                     </div>
                 </div>
 
-                 <div class="flex flex-col md:flex-row gap-6 bg-slate-50 p-6 rounded-xl border border-slate-100 hover:border-itaBlue/30 hover:shadow-lg transition duration-300">
-                    <div class="min-w-[80px] flex flex-col items-center justify-center border-r border-slate-200 pr-6">
-                        <span class="text-2xl font-bold text-slate-300">2025</span>
-                    </div>
-                    <div>
-                        <h4 class="text-lg font-bold text-itaDark mb-2 hover:text-itaBlue cursor-pointer">
-                            Urban Morphology and Infrastructure Patterns: A LiDAR-Based 3D Cluster Analysis Using Verticalization as a Proxy.
-                        </h4>
-                        <p class="text-slate-600 text-sm mb-2">
-                            <span class="font-semibold text-slate-800">Authors:</span> Rocha, E. S.; Maia, A. B.; Almeida, C. M.; Ruiz, P. R. S.
-                        </p>
-                        <p class="text-slate-500 text-xs italic mb-3">Published in: International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences (ISPRS)</p>
-                        
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-[10px] uppercase font-bold bg-emerald-100 text-emerald-700 px-2 py-1 rounded">LiDAR / SR</span>
-                            <span class="text-[10px] uppercase font-bold bg-slate-200 text-slate-600 px-2 py-1 rounded"><i class="fa-solid fa-user"></i> Ezequiel Rocha, Aluizio Maia</span>
-                        </div>
-                         <div class="flex gap-3">
-                            <a href="#" class="text-xs font-bold text-itaBlue border border-itaBlue px-3 py-1 rounded hover:bg-itaBlue hover:text-white transition"><i class="fa-solid fa-arrow-up-right-from-square"></i> Acessar Artigo</a>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="flex flex-col md:flex-row gap-6 bg-slate-50 p-6 rounded-xl border border-slate-100 hover:border-itaBlue/30 hover:shadow-lg transition duration-300">
                     <div class="min-w-[80px] flex flex-col items-center justify-center border-r border-slate-200 pr-6">
                         <span class="text-2xl font-bold text-slate-300">2025</span>
@@ -745,9 +811,9 @@
                             Uso do Sensoriamento Remoto na Análise de Qualidade e Identificação de Defeitos em Pavimentos Flexíveis: Uma Revisão Sistemática.
                         </h4>
                         <p class="text-slate-600 text-sm mb-2">
-                            <span class="font-semibold text-slate-800">Authors:</span> Rocha, Ezequiel Silva., Almeida, Cláudia Maria., Kampel, Milton., Ruiz, Paulo Roberto da Silva 
+                            <span class="font-semibold text-slate-800">Authors:</span> Rocha, Ezequiel Silva; Almeida, Cláudia Maria de; Kampel, Milton; Ruiz, Paulo Roberto da Silva.
                         </p>
-                        <p class="text-slate-500 text-xs italic mb-3">Published in: Revista Brasileira de Cartografia</p>
+                        <p class="text-slate-500 text-xs italic mb-3">Published in: RBC. Revista Brasileira de Cartografia</p>
                         
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="text-[10px] uppercase font-bold bg-emerald-100 text-emerald-700 px-2 py-1 rounded">Sensoriamento Remoto</span>
@@ -755,11 +821,12 @@
                         </div>
 
                         <div class="flex gap-3">
-                            <a href="#" class="text-xs font-bold text-itaBlue border border-itaBlue px-3 py-1 rounded hover:bg-itaBlue hover:text-white transition"><i class="fa-solid fa-file-pdf mr-1"></i> PDF</a>
+                            <a href="https://seer.ufu.br/index.php/revistabrasileiracartografia/article/view/77751" class="text-xs font-bold text-itaBlue border border-itaBlue px-3 py-1 rounded hover:bg-itaBlue hover:text-white transition"><i class="fa-solid fa-file-pdf mr-1"></i> PDF</a>
                         </div>
                     </div>
                 </div>
 
+                <!-- 2024 -->
                 <div class="flex flex-col md:flex-row gap-6 bg-slate-50 p-6 rounded-xl border border-slate-100 hover:border-itaBlue/30 hover:shadow-lg transition duration-300">
                     <div class="min-w-[80px] flex flex-col items-center justify-center border-r border-slate-200 pr-6">
                         <span class="text-2xl font-bold text-slate-300">2024</span>
@@ -784,6 +851,78 @@
                         </div>
                     </div>
                 </div>
+                
+                <div class="flex flex-col md:flex-row gap-6 bg-slate-50 p-6 rounded-xl border border-slate-100 hover:border-itaBlue/30 hover:shadow-lg transition duration-300">
+                    <div class="min-w-[80px] flex flex-col items-center justify-center border-r border-slate-200 pr-6">
+                        <span class="text-2xl font-bold text-slate-300">2024</span>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold text-itaDark mb-2 hover:text-itaBlue cursor-pointer">
+                            A 3D glacier dynamics-line plume model to estimate the frontal ablation of Hansbreen, Svalbard.
+                        </h4>
+                        <p class="text-slate-600 text-sm mb-2">
+                            <span class="font-semibold text-slate-800">Authors:</span> Muñoz-Hermosilla, J. M.; Otero, J.; De Andrés, E.; Shahateet, K.; Navarro, F.; Pérez-Doña, I.
+                        </p>
+                        <p class="text-slate-500 text-xs italic mb-3">Published in: The Cryosphere</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-[10px] uppercase font-bold bg-cyan-100 text-cyan-700 px-2 py-1 rounded">Glaciologia / Modelagem</span>
+                            <span class="text-[10px] uppercase font-bold bg-slate-200 text-slate-600 px-2 py-1 rounded"><i class="fa-solid fa-user"></i> Kaian Shahateet</span>
+                        </div>
+
+                        <div class="flex gap-3">
+                            <a href="https://tc.copernicus.org/articles/18/1911/2024/" target="_blank" class="text-xs font-bold text-itaBlue border border-itaBlue px-3 py-1 rounded hover:bg-itaBlue hover:text-white transition"><i class="fa-solid fa-arrow-up-right-from-square"></i> Acessar Artigo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-6 bg-slate-50 p-6 rounded-xl border border-slate-100 hover:border-itaBlue/30 hover:shadow-lg transition duration-300">
+                    <div class="min-w-[80px] flex flex-col items-center justify-center border-r border-slate-200 pr-6">
+                        <span class="text-2xl font-bold text-slate-300">2024</span>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold text-itaDark mb-2 hover:text-itaBlue cursor-pointer">
+                            Comparing the Segment Anything Model with Region Growing Algorithms in the detection of irrigated croplands.
+                        </h4>
+                        <p class="text-slate-600 text-sm mb-2">
+                            <span class="font-semibold text-slate-800">Authors:</span> Petrone, F. G.; Silva, D. T.; Chaves, M. E. D.; Korting, T. S.; Adami, M.; Maia, A. B.; Sanches, I. D.; Fonseca, L. M. G.
+                        </p>
+                        <p class="text-slate-500 text-xs italic mb-3">Published in: RBC. Revista Brasileira de Cartografia</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-[10px] uppercase font-bold bg-emerald-100 text-emerald-700 px-2 py-1 rounded">Machine Learning / SR</span>
+                            <span class="text-[10px] uppercase font-bold bg-slate-200 text-slate-600 px-2 py-1 rounded"><i class="fa-solid fa-user"></i> Aluizio Maia</span>
+                        </div>
+
+                        <div class="flex gap-3">
+                            <a href="https://seer.ufu.br/index.php/revistabrasileiracartografia/article/view/72592" target="_blank" class="text-xs font-bold text-itaBlue border border-itaBlue px-3 py-1 rounded hover:bg-itaBlue hover:text-white transition"><i class="fa-solid fa-arrow-up-right-from-square"></i> Acessar Artigo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row gap-6 bg-slate-50 p-6 rounded-xl border border-slate-100 hover:border-itaBlue/30 hover:shadow-lg transition duration-300">
+                    <div class="min-w-[80px] flex flex-col items-center justify-center border-r border-slate-200 pr-6">
+                        <span class="text-2xl font-bold text-slate-300">2024</span>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold text-itaDark mb-2 hover:text-itaBlue cursor-pointer">
+                            The Importance of Solving Subglaciar Hydrology in Modeling Glacier Retreat: A Case Study of Hansbreen, Svalbard.
+                        </h4>
+                        <p class="text-slate-600 text-sm mb-2">
+                            <span class="font-semibold text-slate-800">Authors:</span> De Andrés, E.; Muñoz-Hermosilla, J.; Shahateet, K.; Otero, J.
+                        </p>
+                        <p class="text-slate-500 text-xs italic mb-3">Published in: Hydrology</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-[10px] uppercase font-bold bg-blue-100 text-blue-700 px-2 py-1 rounded">Hidrologia / Glaciologia</span>
+                            <span class="text-[10px] uppercase font-bold bg-slate-200 text-slate-600 px-2 py-1 rounded"><i class="fa-solid fa-user"></i> Kaian Shahateet</span>
+                        </div>
+
+                        <div class="flex gap-3">
+                            <a href="https://www.mdpi.com/2306-5338/11/11/193" target="_blank" class="text-xs font-bold text-itaBlue border border-itaBlue px-3 py-1 rounded hover:bg-itaBlue hover:text-white transition"><i class="fa-solid fa-arrow-up-right-from-square"></i> Acessar Artigo</a>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="flex flex-col md:flex-row gap-6 bg-slate-50 p-6 rounded-xl border border-slate-100 hover:border-itaBlue/30 hover:shadow-lg transition duration-300">
                     <div class="min-w-[80px] flex flex-col items-center justify-center border-r border-slate-200 pr-6">
@@ -804,11 +943,13 @@
                         </div>
 
                         <div class="flex gap-3">
-                            <a href="#" class="text-xs font-bold text-itaBlue border border-itaBlue px-3 py-1 rounded hover:bg-itaBlue hover:text-white transition"><i class="fa-solid fa-arrow-up-right-from-square"></i> Acessar Artigo</a>
+                            <a href="https://seer.ufu.br/index.php/revistabrasileiracartografia" class="text-xs font-bold text-itaBlue border border-itaBlue px-3 py-1 rounded hover:bg-itaBlue hover:text-white transition"><i class="fa-solid fa-arrow-up-right-from-square"></i> Acessar Artigo</a>
                         </div>
                     </div>
                 </div>
 
+             
+                <!-- 2021 -->
                 <div class="flex flex-col md:flex-row gap-6 bg-slate-50 p-6 rounded-xl border border-slate-100 hover:border-itaBlue/30 hover:shadow-lg transition duration-300">
                     <div class="min-w-[80px] flex flex-col items-center justify-center border-r border-slate-200 pr-6">
                         <span class="text-2xl font-bold text-slate-300">2021</span>
@@ -834,6 +975,7 @@
                     </div>
                 </div>
 
+                <!-- 2020 -->
                 <div class="flex flex-col md:flex-row gap-6 bg-slate-50 p-6 rounded-xl border border-slate-100 hover:border-itaBlue/30 hover:shadow-lg transition duration-300">
                     <div class="min-w-[80px] flex flex-col items-center justify-center border-r border-slate-200 pr-6">
                         <span class="text-2xl font-bold text-slate-300">2020</span>
@@ -858,6 +1000,7 @@
                     </div>
                 </div>
 
+                <!-- 2019 -->
                 <div class="flex flex-col md:flex-row gap-6 bg-slate-50 p-6 rounded-xl border border-slate-100 hover:border-itaBlue/30 hover:shadow-lg transition duration-300">
                     <div class="min-w-[80px] flex flex-col items-center justify-center border-r border-slate-200 pr-6">
                         <span class="text-2xl font-bold text-slate-300">2019</span>
@@ -867,7 +1010,7 @@
                             A review on crocodilian nesting habitats and their characterisation via remote sensing.
                         </h4>
                         <p class="text-slate-600 text-sm mb-2">
-                            <span class="font-semibold text-slate-800">Authors:</span> Banon, G.P.R.; Renno, C.D.; Arraut, E. M.; Villamarin, F.; Moulatlet, G; Novo, E. M. L. M.; Marioni, B.
+                            <span class="font-semibold text-slate-800">Authors:</span> Banon, G. P. R.; Renno, C. D.; Arraut, E. M.; Villamarin, F.; Moulatlet, G; Novo, E. M. L. M.; Marioni, B.
                         </p>
                         <p class="text-slate-500 text-xs italic mb-3">Published in: The Journal Amphibia-Reptilia</p>
                         
@@ -882,6 +1025,7 @@
                     </div>
                 </div>
 
+                <!-- 2018 -->
                 <div class="flex flex-col md:flex-row gap-6 bg-slate-50 p-6 rounded-xl border border-slate-100 hover:border-itaBlue/30 hover:shadow-lg transition duration-300">
                     <div class="min-w-[80px] flex flex-col items-center justify-center border-r border-slate-200 pr-6">
                         <span class="text-2xl font-bold text-slate-300">2018</span>
@@ -892,7 +1036,7 @@
                             Resource-Area-Dependence Analysis: Inferring animal resource needs from home-range and mapping data.
                         </h4>
                         <p class="text-slate-600 text-sm mb-2">
-                            <span class="font-semibold text-slate-800">Authors:</span> Kenward, R.E.; Arraut, Eduardo M.; Robertson, P. A.; Walls, S. W.; Casey, N.; Aebischer, N. J.
+                            <span class="font-semibold text-slate-800">Authors:</span> Kenward, R. E.; Arraut, Eduardo M.; Robertson, P. A.; Walls, S. W.; Casey, N.; Aebischer, N. J.
                         </p>
                         <p class="text-slate-500 text-xs italic mb-3">Published in: PLoS One</p>
                         
@@ -906,7 +1050,33 @@
                         </div>
                     </div>
                 </div>
+                
+                <div class="flex flex-col md:flex-row gap-6 bg-slate-50 p-6 rounded-xl border border-slate-100 hover:border-itaBlue/30 hover:shadow-lg transition duration-300">
+                    <div class="min-w-[80px] flex flex-col items-center justify-center border-r border-slate-200 pr-6">
+                        <span class="text-2xl font-bold text-slate-300">2018</span>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold text-itaDark mb-2 hover:text-itaBlue cursor-pointer">
+                            Novas ocorrências de tufas no Vale do Ribeira (SP).
+                        </h4>
+                        <p class="text-slate-600 text-sm mb-2">
+                            <span class="font-semibold text-slate-800">Authors:</span> Miraya, B. B.; Ribeiro, L. M. A. L.; Boggiani, P. C.; Shimada, H.
+                        </p>
+                        <p class="text-slate-500 text-xs italic mb-3">Published in: Geociências (São Paulo. Online)</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-[10px] uppercase font-bold bg-stone-100 text-stone-700 px-2 py-1 rounded">Geociências</span>
+                            <span class="text-[10px] uppercase font-bold bg-slate-200 text-slate-600 px-2 py-1 rounded"><i class="fa-solid fa-user"></i> Bruna Miraya</span>
+                        </div>
+
+                        <div class="flex gap-3">
+                            <a href="#" target="_blank" class="text-xs font-bold text-itaBlue border border-itaBlue px-3 py-1 rounded hover:bg-itaBlue hover:text-white transition"><i class="fa-solid fa-arrow-up-right-from-square"></i> Acessar Artigo</a>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
 
             <div id="tab-livros" class="hidden space-y-6">
                 <div class="text-center py-10 text-slate-400 italic">Nenhum capítulo listado ainda.</div>
